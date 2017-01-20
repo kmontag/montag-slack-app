@@ -33,6 +33,8 @@ app.get('/', function(req, res, next) {
 
       var src = images.eq(Math.floor(Math.random() * images.length)).attr('src');
       res.json({
+        response_type: 'in_channel',
+        text: 'montag',
         attachments: [{
           fallback: 'montag',
           image_url: ("http://textgifs.de/montag/" + src),
