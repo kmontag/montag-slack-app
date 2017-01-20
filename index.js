@@ -17,6 +17,7 @@ app.get('/', function(req, res, next) {
   // http://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range
   var min = 1, max = 10;
   var page = Math.floor(Math.random() * (max - min + 1)) + min;
+  page = 5;
 
   var format = d3Format.format('02');
 
@@ -35,7 +36,7 @@ app.get('/', function(req, res, next) {
       res.json({
         attachments: [{
           fallback: 'montag',
-          image_url: ("http://textgifs.de/montag/" + images.first().attr('src')),
+          image_url: ("http://textgifs.de/montag/" + src),
         }],
       });
     }
